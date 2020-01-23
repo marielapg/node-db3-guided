@@ -46,7 +46,7 @@ router.put('/:id', (req, res) => {
   const { id } = req.params;
   const changes = req.body;
 
- Users.update(changes)
+ Users.update(changes,id)
   .then(count => {
     if (count) {
       res.json({ update: count });
